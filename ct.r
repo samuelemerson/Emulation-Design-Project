@@ -161,16 +161,3 @@ filled.contour(x = seq(0,1,length.out=40),
                plot.title = title(main = expression(abs(C(x[T]))),
                                   xlab = expression(x[1]), 
                                   ylab = expression(x[2])))
-
-
-
-
-#sections
-#subsection
-#bullets in subsections describing what you want to do
-#jot down possible future sections
-#send couple of days before...probably by tuesday/wednesday at a push
-#maximize over implausibility space...pick for points in green,evaluate the 4 points
-#do var calcs over like 10000....100000 etc....might wanna speed up code
-#look up optim....try to code a 2d function...then try with emvar and 9 points (18 dim...1 dim output)[very hard...will take a couple of weeks]
-#do optim with average first, problems with piecewise functions with max
