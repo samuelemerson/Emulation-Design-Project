@@ -575,15 +575,3 @@ filled.contour(x = seq(-0.5,(2*pi)+0.5,length.out=40),
                  axis(2,seq(from=0,to=6,by=1))
                  points(mopoints,col="black",pch=19)
                  points(matrix(moptimpoints.1$par,nrow=4,ncol=2),col="black",pch=4)})
-
-
-
-
-##floor is very high...bad! need a smoother penalty
-##first need to scale variance down to implausibility...then choose smooth penalty, like imp^2 - 3 could work
-#add nugget through stuff on board
-#for variance problem now do it with the 95th quantile....see how different quantiles work
-##also try 7 points...see where it puts it for average
-#just add bullet points for latex report
-#truncation error
-#for one not using optim...add implausibility and then reject it if the imp is low
