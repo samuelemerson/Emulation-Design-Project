@@ -45,7 +45,7 @@ lines(emufunexpsqrun1[[1]],emufunexpsqrun1[[5]],type='l',lwd=2,col='red')
 lines(emufunexpsqrun1[[1]],emufunexpsqrun1[[6]],type='l',lwd=2,col='red')
 points(emufunexpsqrun1[[3]],emufunexpsqrun1[[4]],col='black',cex=1.2,pch=19)
 lines(sequemsinexp,realepsq,type='l',lwd=2,col='black')
-legend(x=0.075,y=12,legend=c(expression(E[D](f(x))),expression(f(x)),expression(paste("±",3*sqrt("Var"[D](f(x))))),"D"),col=c("blue","black","red","black"),lty=c(1,1,1,NA),pch=c(NA,NA,NA,19),bty="n",lwd=2)
+legend(x=0.075,y=12,legend=c(expression(E[D](f(x))),expression(f(x)),expression(paste("Â±",3*sqrt("Var"[D](f(x))))),"D"),col=c("blue","black","red","black"),lty=c(1,1,1,NA),pch=c(NA,NA,NA,19),bty="n",lwd=2)
 dev.off()
 sequemsinexp = seq(0.05,0.55,length.out=10000)
 #plot(sequemsinexp,(-3.5+exp(3.5*sequemsinexp))^2,type='l')
@@ -2482,4 +2482,30 @@ filled.contour(x = seq(0,1,length.out=40),
                  axis(2,seq(from=0,to=1,by=0.2))
                  points(MCrobot3points.6,col="black",pch=19)
                  points(matrix(MCRA3possnewmax.6$par,nrow=1,ncol=2),col="black",pch=4)})
+dev.off()
+
+#########################################################################################################
+
+pdf("9pointEIwave1notMC.pdf",width = 7.6,height = 7)
+filled.contour(x = seq(-0.5,(2*pi)+0.5,length.out=40),
+               y = seq(-0.5,(2*pi)+0.5,length.out=40), 
+               z = -sequemaccmat,
+               col = colors,
+               plot.title = title(main = expression(paste(EI(x)," for Initial Emulator")),
+                                  xlab = expression(x[1]), ylab = expression(x[2])),
+               plot.axes = {axis(1,seq(from=0,to=6,by=1))
+                 axis(2,seq(from=0,to=6,by=1))
+                 points(oavgpoints,col="black",pch=19)})
+dev.off()
+
+pdf("9pointEIwave1MC.pdf",width = 7.6,height = 7)
+filled.contour(x = seq(-0.5,(2*pi)+0.5,length.out=40),
+               y = seq(-0.5,(2*pi)+0.5,length.out=40), 
+               z = sequemaccmatMC,
+               col = colors,
+               plot.title = title(main = expression(paste(EI[MC](x)," for Initial Emulator")),
+                                  xlab = expression(x[1]), ylab = expression(x[2])),
+               plot.axes = {axis(1,seq(from=0,to=6,by=1))
+                 axis(2,seq(from=0,to=6,by=1))
+                 points(oavgpoints,col="black",pch=19)})
 dev.off()
