@@ -1,3 +1,7 @@
+newfun = function(x){
+  return(3*x*sin((5*pi*(x-0.1))/0.4))
+}
+
 emufunnew8p = function(B0,sigmau,theta,points){
   a = points
   D = newfun(a)
