@@ -627,12 +627,3 @@ filled.contour(x = seq(-0.5,(2*pi)+0.5,length.out=40),
                  points(k.z0new2,col="black",pch=19)})
 
 dev.off()
-
-
-
-#pdf plots 7*8 and then scale up by 50%...or down by 50% to fix white line problem
-#generate latin hypercube with 100000000000 or bigger do waves etc.
-#generate 1000 hypercubes, clculate emulator variance of these
-#choose average one and one with min max variance...show wave one plots
-#consider wave 2 choices 
-#optim
