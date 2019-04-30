@@ -262,12 +262,3 @@ persp(x, y, z, theta = 30, phi = 30, expand = 0.5, col = "lightblue")
 
 filled.contour(x,y,z,
                color.palette = colorRampPalette(c('green','yellow','red')))
-
-#1st section intro
-#2nd section bayes linear emu/guassian process emu
-#3rd section history matching
-#can write subsections
-#use for loop to find best lhs design...min dist of lhs and find max
-#possibly use latex on r...expression
-#6% is plus minus 3 sigma so 1 sigma should be 1% of range...
-#therefore variance in o.e. should be 1% squared
