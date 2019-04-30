@@ -508,9 +508,3 @@ newpointsrun1 = overallsequem(c(0.1,0.2,0.3,0.317,0.396,0.4,0.5))
 plot(newpointsrun1[[1]],newpointsrun1[[2]],type='l',col='green',xlab='x',ylab='I')
 abline(h=2,col='yellow')
 locator()
-
-#fill.contour
-#add points
-#change code to 2d
-#test 2d function sin+cos for eg
-#look up expand grid function....probably for sequem (might need as.matrix)
